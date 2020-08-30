@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farben</title>
+</head>
+<body id="farbe">
+
+    
+
+
+<p style= "color: white; font-size: 164px; " id="text">HALLO!</p>
+
+<p style= "color: white; font-size: 40px; " id="numer">0</p>
+
+
+    <style>
+        #farbe {
+        background-color: blueviolet;
+        }
+    </style>
+
+
+    <script>
+let zut = true;
+
+function change() {
+    if (zut) {
+document.getElementById('text').innerHTML = "HOT!";
+zut = false;} else {
+    document.getElementById('text').innerHTML = "COLD!";
+zut = true;    
+}
+ } 
+
+function endern(){
+ document.getElementById('farbe').style.backgroundColor = 'red';
+}
+ 
+ 
+function groeße(){
+ document.getElementById('text').style.fontSize = '100px';
+}
+ 
+
+
+function zufall(){
+
+ document.getElementById('numer').innerHTML= Math.floor((Math.random() * 100) + 1);
+}
+</script>
+
+
+<button type="button" id="farbe-ändern" onclick="endern()">Farbe ändern</button> 
+<button type="button" id="text-ändern" onclick="change()">Text ändern</button>  
+<button type="button" id="Größe-ändern" onclick="groeße()">Größe ändern</button> 
+<button type="button" id="Zufallszahl" onclick="zufall()">Zufallszahl (1-100)</button> 
+
+</body>
+</html>
